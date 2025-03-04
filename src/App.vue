@@ -1,12 +1,13 @@
 <script setup>
 import HeaderBlock from './components/HeaderBlock.vue'
+import GamesCalendar from './components/GamesCalendar/GamesCalendar.vue'
 </script>
 
 <template>
   <HeaderBlock title="FC Los Tigres" />
-  <header></header>
-
-  <main></main>
+  <main>
+    <GamesCalendar title="Matches" />
+  </main>
 </template>
 
 <style scoped>

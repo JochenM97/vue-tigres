@@ -20,6 +20,11 @@
   font-weight: normal;
 }
 
+:root {
+  --color-text: #fff;
+  --color-background: #161616;
+}
+
 body {
   min-height: 100vh;
   color: var(--color-text);
