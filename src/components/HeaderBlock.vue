@@ -21,11 +21,16 @@ header {
 h1 {
   color: #fff;
   font-weight: 500;
-  font-size: 5rem;
+  font-size: 3rem;
   position: relative;
   text-align: center;
   width: 100%;
   display: block;
   font-family: 'BebasNeueRegular';
+}
+@media only screen and (min-width: 768px) {
+  h1 {
+    font-size: 5rem;
+  }
 }
 </style>

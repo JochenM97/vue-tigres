@@ -6,7 +6,7 @@ import GamesCalendar from './components/GamesCalendar/GamesCalendar.vue'
 <template>
   <HeaderBlock title="FC Los Tigres" />
   <main>
-    <GamesCalendar title="Matches" />
+    <GamesCalendar title="Matchen" />
   </main>
 </template>
 

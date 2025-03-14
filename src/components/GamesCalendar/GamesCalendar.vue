@@ -28,14 +28,14 @@ const initializeGapiClient = async () => {
 }
 
 const months = [
-  'January',
-  'February',
-  'March',
+  'Januari',
+  'Februari',
+  'Maart',
   'April',
-  'May',
-  'June',
-  'July',
-  'August',
+  'Mei',
+  'Juni',
+  'Juli',
+  'Augustus',
   'September',
   'November',
   'December',
@@ -116,15 +116,11 @@ onMounted(() => {
 
 <style scoped>
 .container {
-  background-color: lightgray;
-}
-.matches-table {
-  display: grid;
 }
 h2 {
   color: #fff;
   font-weight: 300;
-  font-size: 5rem;
+  font-size: 3rem;
   position: relative;
   width: 100%;
   display: block;
@@ -132,5 +128,10 @@ h2 {
 }
 .calendar-month {
   margin-bottom: 20px;
+}
+@media only screen and (min-width: 768px) {
+  h2 {
+    font-size: 5rem;
+  }
 }
 </style>
