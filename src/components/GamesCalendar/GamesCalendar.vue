@@ -48,8 +48,6 @@ const gamesMapping = (items) => {
       const itemMonthIndex = startDate.getMonth()
       const itemMonth = months[itemMonthIndex]
 
-      console.log(months, itemMonthIndex, item.start)
-
       if (mappedItems[itemMonth]) {
         return {
           ...mappedItems,
@@ -120,7 +118,7 @@ onMounted(() => {
 h2 {
   color: #fff;
   font-weight: 300;
-  font-size: 3rem;
+  font-size: 2rem;
   position: relative;
   width: 100%;
   display: block;
