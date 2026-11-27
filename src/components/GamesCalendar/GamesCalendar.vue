@@ -80,9 +80,10 @@ const gamesMapping = (items) => {
 
 const fetchEvents = async () => {
   try {
-     // Fetch from local Flask backend
-    const timeMin = new Date().toISOString()
-    const response = await fetch(`http://localhost:5000/api/calendar/events?timeMin=${timeMin}`)
+    // Fetch from local Flask backend. The URL carries no parameters on purpose:
+    // the backend decides the time window, and a stable URL is what lets the
+    // browser reuse its own cached copy across reloads.
+    const response = await fetch('http://localhost:5000/api/calendar/events')
     
     if (!response.ok) {
       throw new Error(`HTTP error! status: ${response.status}`)
