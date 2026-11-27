@@ -23,6 +23,20 @@ const returnCompetion = (summary, returnClass = false) => {
 
   return 'Zaalvoetbal'
 }
+
+// Belgian notation: "20u" on the hour, "20u05" / "20u30" otherwise.
+const formatTime = (dateTime) => {
+  const date = new Date(dateTime)
+
+  if (Number.isNaN(date.getTime())) {
+    return ''
+  }
+
+  const hours = date.getHours()
+  const minutes = date.getMinutes()
+
+  return minutes ? `${hours}u${String(minutes).padStart(2, '0')}` : `${hours}u`
+}
 </script>
 
 <template>
@@ -54,10 +68,7 @@ const returnCompetion = (summary, returnClass = false) => {
           <div>
             <span>
               <span class="date-hours-border"></span
-              ><span class="date-hours"
-                >{{ new Date(game.start.dateTime).getHours() }}u{{
-                  new Date(game.start.dateTime).getMinutes() || ''
-                }}</span
+              ><span class="date-hours">{{ formatTime(game.start.dateTime) }}</span
               ></span
             >
           </div>
